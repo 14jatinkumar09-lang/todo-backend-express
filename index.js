@@ -5,7 +5,11 @@ const cors = require("cors") ;
 const dotenv = require("dotenv") ;
 dotenv.config() ;
 
-app.use(cors()) ;
+app.use(cors({
+  origin: 'https://todo-frontend-react-production.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 app.use(express.json()) ;
 
 const todoSchema = require("./db")
