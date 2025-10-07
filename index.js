@@ -84,7 +84,7 @@ app.get("/deleteAll" , async(req,res) => {
     catch(err) {
         return res.status(400).json({msg : "something went wrong"}) ;
     }} )
-
+app.listen(3000);
 module.exports = app ;
 
 
