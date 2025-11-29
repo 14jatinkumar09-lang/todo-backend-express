@@ -1,16 +1,21 @@
 const mongoose = require("mongoose") ;
 
 const todoSchema = new mongoose.Schema({
-    title : {
-        type : String ,
-        required : true
+    userName : {
+        type : String , 
+        unique : true ,
+        required  : true
     } ,
-    description : {
-        type : String ,
-        required : true ,
-    } ,
-    todoStatus : Boolean    
-})
+    password : {
+        type : String , 
+        required  : true
+    } , 
+    files : [{
+        name : String ,
+        password : String ,
+    }] ,
+        
+} , {timestamps : true   })
 
 
 module.exports = todoSchema ;

@@ -3,4 +3,7 @@ node_modules/
 npm-debug.log
 .vscode/
 dist/
-    
+views/
+server.js
+public/
+files/
