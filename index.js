@@ -11,7 +11,7 @@ app.use(cookieParser());
 
 
  app.use(cors({
-  origin: 'http://localhost:5173' , //'https://todo-frontend-react-production.vercel.app'
+  origin: process.env.URI , //'https://todo-frontend-react-production.vercel.app'
 //   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 })); 
